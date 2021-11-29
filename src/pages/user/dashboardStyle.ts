@@ -1,10 +1,6 @@
 import styled from 'styled-components'
 
-export const DashboardMain = styled.main`
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 1rem 0 0.5rem;
-
+export const DashboardSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +50,7 @@ export const ProductCard = styled.div`
   background: var(--white-900);
   border-radius: 0.25rem;
   padding: 1.25rem;
-  box-shadow: 0 0.125rem 0.315rem 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.125rem 0.315rem 0 rgba(0, 0, 0, 0.25);
 
   .product-details {
     display: flex;
