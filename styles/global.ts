@@ -2,9 +2,12 @@ import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
   :root {
+    --grey-100: #f0f0f0;
     --grey-500: #d3d3d8;
     --grey-900: #808080;
+
     --white-900: #ffffff;
+
     --black-900: #000000;
   }
   
@@ -30,7 +33,7 @@ export const GlobalStyles = createGlobalStyle`
     color: var(--black-900);
   }
 
-  button {
+  button, textarea {
     font: 400 1rem Roboto, sans-serif;
   }
 
