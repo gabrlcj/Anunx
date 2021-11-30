@@ -22,7 +22,7 @@ export const PublishSection = styled.section`
   }
 
   .button-div {
-    width: min(880px, 95%);
+    width: min(950px, 95%);
     margin: 0 auto;
 
     display: flex;
@@ -31,8 +31,8 @@ export const PublishSection = styled.section`
 
     button {
       margin-top: 1.5rem;
-      background: var(--black-900);
-      color: var(--white-900);
+      background: transparent;
+      color: var(--black-900);
       padding: 0.5rem 0.75rem;
       border: 1px solid var(--black-900);
       border-radius: 0.25rem;
@@ -42,26 +42,25 @@ export const PublishSection = styled.section`
       transition: all 0.2s ease;
 
       &:hover {
-        background: var(--white-900);
-        border: 1px solid var(--white-900);
-        color: var(--black-900);
+        background: var(--black-900);
+        color: var(--white-900);
       }
     }
   }
 `
 
 export const InputBox = styled.div`
-  width: min(880px, 95%);
+  width: min(950px, 95%);
   margin: 3rem auto 0;
   background: var(--white-900);
   box-shadow: 0 0.125rem 0.315rem 0 rgba(0, 0, 0, 0.25);
-  padding: 1.15rem;
+  padding: 2rem;
   border-radius: 0.25rem;
 
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
 
   h1 {
     font-size: 1.25rem;
@@ -101,6 +100,71 @@ export const InputBox = styled.div`
 
     &:hover {
       border: 1px solid var(--black-900);
+    }
+  }
+
+  .thumbs-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .dropzone {
+      width: 12.5rem;
+      height: 9.35rem;
+      background: var(--grey-100);
+      border: 2px dashed var(--black-900);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 1rem;
+      margin-right: 1rem;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .thumb {
+      width: 12.5rem;
+      height: 9.35rem;
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+      margin: 0 1rem 1rem 0;
+
+      &:hover .mask {
+        display: flex;
+      }
+
+      .mask {
+        background: rgba(0, 0, 0, 0.7);
+        height: 100%;
+
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        .delete-icon {
+          font-size: 2.5rem;
+          color: var(--white-900);
+          cursor: pointer;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .main-image {
+        color: var(--white-900);
+        background: var(--red-500);
+        padding: 0.25rem 0.75rem;
+        font-weight: 700;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
     }
   }
 `

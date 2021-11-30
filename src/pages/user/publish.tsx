@@ -1,10 +1,36 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Container } from '../../../styles/container'
+import { useState } from 'react'
+import { useDropzone } from 'react-dropzone'
 
+import { MdDeleteForever } from 'react-icons/md'
+import { Container } from '../../../styles/container'
 import { PublishSection, InputBox } from './publishStyle'
 
+interface NewFile extends File {
+  preview: string
+}
+
 const Publish: NextPage = () => {
+  const [files, setFiles] = useState<NewFile[]>([])
+
+  const { getRootProps, getInputProps } = useDropzone({
+    accept: 'image/*',
+    onDrop: (acceptedFiles: File[]) => {
+      const newFiles = acceptedFiles.map((file) => {
+        return Object.assign(file, {
+          preview: URL.createObjectURL(file),
+        })
+      })
+      setFiles((prevState) => [...prevState, ...newFiles])
+    },
+  })
+
+  const handleRemoveFile = (fileName: string) => {
+    const newFileState = files.filter((file) => file.name !== fileName)
+    setFiles(newFileState)
+  }
+
   return (
     <Container>
       <Head>
@@ -48,6 +74,33 @@ const Publish: NextPage = () => {
         <InputBox>
           <h1>Imagens</h1>
           <p>A primeira imagem será a principal do seu anúncio!</p>
+          <div className='thumbs-container'>
+            <div className='dropzone' {...getRootProps()}>
+              <input {...getInputProps()} />
+              <p>Clique para adicionar ou arraste a imagem aqui.</p>
+            </div>
+            {files.map((file, index) => (
+              <div
+                key={file.name}
+                className='thumb'
+                style={{
+                  backgroundImage: `url(${file.preview})`,
+                }}
+              >
+                {index === 0 ? (
+                  <div className='main-image'>
+                    <small>Principal</small>
+                  </div>
+                ) : null}
+                <div className='mask'>
+                  <MdDeleteForever
+                    className='delete-icon'
+                    onClick={() => handleRemoveFile(file.name)}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </InputBox>
 
         <InputBox>
