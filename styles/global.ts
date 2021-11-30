@@ -9,6 +9,8 @@ export const GlobalStyles = createGlobalStyle`
     --white-900: #ffffff;
 
     --black-900: #000000;
+
+    --red-500: #950101;
   }
   
   *, *::after, *::before {
