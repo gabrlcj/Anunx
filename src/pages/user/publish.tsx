@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import { useDropzone } from 'react-dropzone'
 
-import { MdDeleteForever } from 'react-icons/md'
+import { MdDeleteForever, MdAttachMoney } from 'react-icons/md'
 import { Container } from '../../../styles/container'
 import { PublishSection, InputBox } from './publishStyle'
 
@@ -108,6 +108,16 @@ const Publish: NextPage = () => {
           <p>Escreva os detalhes do seu produto que está sendo anúnciado</p>
           <label htmlFor='description' />
           <textarea name='description' id='description' rows={6} />
+        </InputBox>
+
+        <InputBox>
+          <h1>Preço</h1>
+          <fieldset>
+            <legend>Valor</legend>
+            <label htmlFor='price' />
+            <MdAttachMoney size={20} />
+            <input name='price' id='price' type='number' step='0.01' />
+          </fieldset>
         </InputBox>
 
         <InputBox>

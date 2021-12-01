@@ -103,6 +103,37 @@ export const InputBox = styled.div`
     }
   }
 
+  fieldset {
+    width: 100%;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    &:hover,
+    &:focus-within {
+      border-color: var(--black-900);
+    }
+
+    legend {
+      font-size: 0.75rem;
+      padding: 0 0.25rem;
+    }
+
+    input {
+      border: 0;
+      margin-left: 1rem;
+    }
+
+    svg {
+      position: absolute;
+      left: 0.35rem;
+      color: var(--grey-900);
+    }
+  }
+
   .thumbs-container {
     display: flex;
     flex-wrap: wrap;
