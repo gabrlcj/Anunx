@@ -14,6 +14,7 @@ export const PublishSection = styled.section`
       margin-top: 3rem;
       font-size: 3rem;
       font-weight: 300;
+      text-align: center;
     }
 
     p {
@@ -31,20 +32,13 @@ export const PublishSection = styled.section`
 
     button {
       margin-top: 1.5rem;
-      background: transparent;
-      color: var(--black-900);
+      background: var(--black-900);
+      color: var(--white-900);
       padding: 0.5rem 0.75rem;
       border: 1px solid var(--black-900);
       border-radius: 0.25rem;
       font-weight: 500;
       text-transform: uppercase;
-
-      transition: all 0.2s ease;
-
-      &:hover {
-        background: var(--black-900);
-        color: var(--white-900);
-      }
     }
   }
 `

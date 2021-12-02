@@ -10,6 +10,7 @@ export const DashboardSection = styled.section`
     margin-top: 3rem;
     font-weight: 300;
     font-size: 3rem;
+    text-align: center;
   }
 
   button {
