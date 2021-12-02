@@ -35,7 +35,7 @@ export const GlobalStyles = createGlobalStyle`
     color: var(--black-900);
   }
 
-  button, textarea {
+  button, textarea, input {
     font: 400 1rem Roboto, sans-serif;
   }
 
