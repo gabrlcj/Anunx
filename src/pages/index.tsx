@@ -1,12 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+import Card from '../components/Card'
 
 import VercelIcon from '/public/vercel.svg'
 import { Container } from '../../styles/container'
-import { HomeMain } from './homeStyle'
+import { HomeMain, ProductsSection } from './homeStyle'
 import { IoSearchSharp } from 'react-icons/io5'
-import { ProductCard, ProductsSection } from './user/dashboardStyle'
 
 const Home: NextPage = () => {
   return (
@@ -30,34 +29,11 @@ const Home: NextPage = () => {
 
         <h2>Destaques</h2>
         <ProductsSection>
-          <ProductCard>
-            <Image src={VercelIcon} alt='Produto' />
-            <div className='product-details'>
-              <h2>Produto X</h2>
-              <p>R$ 60,00</p>
-            </div>
-          </ProductCard>
-          <ProductCard>
-            <Image src={VercelIcon} alt='Produto' />
-            <div className='product-details'>
-              <h2>Produto X</h2>
-              <p>R$ 60,00</p>
-            </div>
-          </ProductCard>
-          <ProductCard>
-            <Image src={VercelIcon} alt='Produto' />
-            <div className='product-details'>
-              <h2>Produto X</h2>
-              <p>R$ 60,00</p>
-            </div>
-          </ProductCard>
-          <ProductCard>
-            <Image src={VercelIcon} alt='Produto' />
-            <div className='product-details'>
-              <h2>Produto X</h2>
-              <p>R$ 60,00</p>
-            </div>
-          </ProductCard>
+          <Card image={VercelIcon} title='Produto X' subtitle='R$ 60,00' />
+          <Card image={VercelIcon} title='Produto X' subtitle='R$ 60,00' />
+          <Card image={VercelIcon} title='Produto X' subtitle='R$ 60,00' />
+          <Card image={VercelIcon} title='Produto X' subtitle='R$ 60,00' />
+          <Card image={VercelIcon} title='Produto X' subtitle='R$ 60,00' />
         </ProductsSection>
       </HomeMain>
     </Container>

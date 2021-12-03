@@ -6,22 +6,16 @@ export const HomeMain = styled.main`
   justify-content: center;
   flex-direction: column;
 
-  h1 {
-    font-size: 2.5rem;
-    margin-top: 3rem;
-    text-align: center;
-  }
-
   h2 {
-    font-size: 2rem;
-    margin-top: 5rem;
+    font-size: 2.25rem;
+    margin-top: 3rem;
     text-align: center;
     font-weight: 500;
   }
 
   .search-box {
     position: relative;
-    width: min(670px, 95%);
+    width: min(770px, 95%);
 
     input {
       width: 100%;
@@ -45,5 +39,25 @@ export const HomeMain = styled.main`
         border-radius: 50%;
       }
     }
+  }
+`
+
+export const ProductsSection = styled.section`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 280px);
+  grid-auto-rows: 290px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  gap: 2rem;
+
+  padding: 0 0.75rem 1rem;
+  margin-top: 3rem;
+  width: 100%;
+
+  h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
   }
 `
