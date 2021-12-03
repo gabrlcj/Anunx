@@ -42,6 +42,7 @@ const Publish: NextPage = () => {
           <h1>Publicar Anúncio</h1>
           <p>Quanto mais detalhado, melhor!</p>
         </div>
+
         <InputBox>
           <label htmlFor='title'>Título do anúncio</label>
           <input

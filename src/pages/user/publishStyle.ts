@@ -1,21 +1,12 @@
 import styled from 'styled-components'
 
 export const PublishSection = styled.section`
-  margin-bottom: 1rem;
-
   .title-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 0.5rem;
-
-    h1 {
-      margin-top: 3rem;
-      font-size: 3rem;
-      font-weight: 300;
-      text-align: center;
-    }
 
     p {
       font-size: 1.15rem;
