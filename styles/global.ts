@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
 
     --white-900: #ffffff;
 
+    --black-700: #262628;
     --black-900: #000000;
 
     --red-500: #950101;
@@ -39,11 +40,15 @@ export const GlobalStyles = createGlobalStyle`
     font: 400 1rem Roboto, sans-serif;
   }
 
-  button {
+  button, a {
     cursor: pointer;
   }
 
   [disabled] {
     cursor: not-allowed;
+  }
+
+  a {
+    text-decoration: none;
   }
 `
