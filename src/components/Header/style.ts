@@ -9,6 +9,7 @@ export const HeaderContainer = styled.header`
   .header-nav {
     max-width: 1240px;
     margin: 0 auto;
+    padding: 0 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,8 +58,18 @@ export const HeaderContainer = styled.header`
 
           position: absolute;
           bottom: -500%;
-          right: -30%;
+          right: -10%;
           animation: ${FadeIn} 0.3s ease;
+
+          @media (max-width: 1080px) {
+            bottom: -480%;
+            right: -0%;
+          }
+
+          @media (max-width: 720px) {
+            bottom: -460%;
+            right: 0%;
+          }
 
           a {
             color: var(--black-900);
