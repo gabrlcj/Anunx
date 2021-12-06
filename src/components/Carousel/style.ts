@@ -40,7 +40,6 @@ export const SliderSection = styled.section`
     .image {
       opacity: 1;
       border-radius: 0.25rem;
-      transition: opacity 1s ease;
     }
   }
 `
