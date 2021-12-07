@@ -44,12 +44,10 @@ export const HomeMain = styled.main`
 
 export const ProductsSection = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fit, 280px);
-  grid-auto-rows: 290px;
+  grid-template-columns: repeat(auto-fit, 320px);
+  grid-auto-rows: 310px;
   justify-content: center;
-  justify-items: center;
   align-items: center;
-  align-content: center;
   gap: 2rem;
 
   padding: 0 0.75rem 1rem;

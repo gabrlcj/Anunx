@@ -29,11 +29,41 @@ const Home: NextPage = () => {
 
         <h2>Destaques</h2>
         <ProductsSection>
-          <Card image={VercelIcon} title='Produto X' subtitle='R$ 60,00' />
-          <Card image={VercelIcon} title='Produto X' subtitle='R$ 60,00' />
-          <Card image={VercelIcon} title='Produto X' subtitle='R$ 60,00' />
-          <Card image={VercelIcon} title='Produto X' subtitle='R$ 60,00' />
-          <Card image={VercelIcon} title='Produto X' subtitle='R$ 60,00' />
+          <Card
+            image={
+              'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+            }
+            title='Produto X'
+            subtitle='R$ 60,00'
+          />
+          <Card
+            image={
+              'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+            }
+            title='Produto X'
+            subtitle='R$ 60,00'
+          />
+          <Card
+            image={
+              'https://images.unsplash.com/photo-1627483262769-04d0a1401487?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+            }
+            title='Produto X'
+            subtitle='R$ 60,00'
+          />
+          <Card
+            image={
+              'https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80'
+            }
+            title='Produto X'
+            subtitle='R$ 60,00'
+          />
+          <Card
+            image={
+              'https://images.unsplash.com/photo-1531525645387-7f14be1bdbbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'
+            }
+            title='Produto X'
+            subtitle='R$ 60,00'
+          />
         </ProductsSection>
       </HomeMain>
     </Container>
