@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyles = createGlobalStyle`
   :root {
     --grey-100: #f0f0f0;
+    --grey-300: #e8e8e9;
     --grey-500: #d3d3d8;
     --grey-900: #808080;
 
@@ -32,7 +33,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font: 400 1rem Roboto, sans-serif;
-    background: var(--grey-500);
+    background: var(--grey-300);
     color: var(--black-900);
   }
 
