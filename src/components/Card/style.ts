@@ -12,6 +12,10 @@ export const ProductCard = styled.div`
   padding-bottom: 1rem;
   box-shadow: 0 0.125rem 0.315rem 0 rgba(0, 0, 0, 0.25);
 
+  img {
+    border-radius: 0.25rem 0.25rem 0 0;
+  }
+
   .product-details {
     display: flex;
     align-items: flex-start;

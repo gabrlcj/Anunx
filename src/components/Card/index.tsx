@@ -12,7 +12,7 @@ interface CardProps {
 const Card = ({ image, title, subtitle, actions }: CardProps) => {
   return (
     <ProductCard>
-      <Image src={image} alt='Produto' width={300} height={200} />
+      <Image src={image} alt='Produto' width={320} height={200} />
       <div className='product-details'>
         <h2>{title}</h2>
         <p>{subtitle}</p>
