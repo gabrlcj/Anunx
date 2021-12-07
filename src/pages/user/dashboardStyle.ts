@@ -21,12 +21,10 @@ export const DashboardSection = styled.section`
 
 export const ProductsSection = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fit, 280px);
-  grid-auto-rows: 350px;
+  grid-template-columns: repeat(auto-fit, 320px);
+  grid-auto-rows: 330px;
   justify-content: center;
-  justify-items: center;
   align-items: center;
-  align-content: center;
   gap: 2rem;
 
   padding: 0 0.75rem 1rem;
