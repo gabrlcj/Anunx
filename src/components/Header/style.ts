@@ -49,6 +49,8 @@ export const HeaderContainer = styled.header`
 
         .menu-links {
           background: var(--white-900);
+          border: 1px solid var(--grey-500);
+          border-top: 0;
           border-radius: 0.25rem;
 
           display: flex;
