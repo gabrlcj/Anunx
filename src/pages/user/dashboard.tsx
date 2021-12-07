@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
 import { Container } from '../../../styles/container'
 import { DashboardSection, ProductsSection } from './dashboardStyle'
 import Card from '../../components/Card'
@@ -13,7 +14,9 @@ const Dashboard: NextPage = () => {
 
       <DashboardSection>
         <h1>Meus Anúncios</h1>
-        <button>Publicar novo anúncio</button>
+        <Link href='/user/publish' passHref>
+          <button>Publicar novo anúncio</button>
+        </Link>
         <ProductsSection>
           <Card
             image={
