@@ -29,12 +29,12 @@ const Carousel = ({ slides }: CarouselProps) => {
     <SliderSection>
       <FaArrowAltCircleLeft
         className='left-arrow'
-        size={32}
+        size={34}
         onClick={prevSlide}
       />
       <FaArrowAltCircleRight
         className='right-arrow'
-        size={32}
+        size={34}
         onClick={nextSlide}
       />
       {SliderData.map((slide, index) => (
@@ -47,12 +47,13 @@ const Carousel = ({ slides }: CarouselProps) => {
               className='image'
               src={slide.image}
               alt='just some images'
-              width={700}
+              width={800}
               height={450}
             />
           )}
         </div>
       ))}
+      <strong style={{ marginBottom: '0.5rem' }}>{current + 1}</strong>
     </SliderSection>
   )
 }
