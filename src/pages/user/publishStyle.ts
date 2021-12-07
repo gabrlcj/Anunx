@@ -66,6 +66,18 @@ export const InputBox = styled.div`
     font-size: 1.025rem;
   }
 
+  span.error {
+    color: red;
+  }
+
+  .error {
+    border-color: rgba(255, 0, 0, 0.75);
+
+    &::placeholder {
+      color: rgba(255, 0, 0, 0.75);
+    }
+  }
+
   select {
     width: 100%;
     border: 0;
@@ -137,6 +149,11 @@ export const InputBox = styled.div`
       margin-right: 1rem;
       text-align: center;
       cursor: pointer;
+
+      &.error {
+        border-color: rgba(255, 0, 0, 0.75);
+        color: red;
+      }
     }
 
     .thumb {
