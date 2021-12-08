@@ -12,7 +12,7 @@ export const FooterContainer = styled.footer`
     border-top: 1px solid var(--black-700);
 
     a {
-      padding: 4rem 0;
+      padding: 2.5rem 0;
       color: var(--black-700);
 
       @media (max-width: 720px) {
