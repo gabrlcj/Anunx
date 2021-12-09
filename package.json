@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "formik": "^2.2.9",
     "mongoose": "^6.1.0",
     "next": "12.0.4",
@@ -19,6 +20,7 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
     "@types/node": "16.11.10",
     "@types/react": "17.0.37",
     "@types/styled-components": "^5.1.15",
