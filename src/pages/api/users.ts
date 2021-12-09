@@ -1,35 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import UsersModel from '../../models/users'
-import dbConnect from '../../lib/dbConnect'
-import { crypto } from '../../utils/password'
+import nextConnect from 'next-connect'
+import { getUsers, postUser } from '../../controllers/users'
 
-const users = async (req: NextApiRequest, res: NextApiResponse) => {
-  const { method } = req
+const route = nextConnect()
 
-  switch (method) {
-    case 'GET':
-      await dbConnect()
-      res.status(200).json({ sucess: true })
-      break
+route.get(getUsers)
 
-    case 'POST':
-      const { name, email, password } = req.body
+route.post(postUser)
 
-      await dbConnect()
-
-      const passwordCrypto = await crypto(password)
-
-      const user = new UsersModel({
-        name,
-        email,
-        password: passwordCrypto,
-      })
-
-      user.save()
-
-      res.status(201).json({ success: true })
-      break
-  }
-}
-
-export default users
+export default route
