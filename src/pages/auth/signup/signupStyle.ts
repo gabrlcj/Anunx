@@ -66,4 +66,69 @@ export const InputBox = styled.div`
     font-weight: 700;
     text-transform: uppercase;
   }
+
+  .loading-icon {
+    display: inline-block;
+    position: relative;
+    width: 5rem;
+    height: 3rem;
+    margin: 0 auto;
+
+    div {
+      position: absolute;
+      top: 1.15rem;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: var(--black-900);
+      animation-timing-function: cubic-bezier(0, 1, 1, 0);
+
+      &:nth-child(1) {
+        left: 0.5rem;
+        animation: loadingAnimation1 0.6s infinite;
+      }
+
+      &:nth-child(2) {
+        left: 0.5rem;
+        animation: loadingAnimation2 0.6s infinite;
+      }
+
+      &:nth-child(3) {
+        left: 2rem;
+        animation: loadingAnimation2 0.6s infinite;
+      }
+
+      &:nth-child(4) {
+        left: 3.5rem;
+        animation: loadingAnimation3 0.6s infinite;
+      }
+    }
+  }
+
+  @keyframes loadingAnimation1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes loadingAnimation2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+
+  @keyframes loadingAnimation3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
 `
