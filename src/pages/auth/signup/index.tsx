@@ -1,12 +1,42 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+
+import axios from 'axios'
+import { toast } from 'react-toastify'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 
-import { Container } from '../../../../styles/container'
-import { SignUpSection, InputBox } from './signupStyle'
 import { initialValues, validationSchema } from './formValues'
 
+import { SignUpSection, InputBox } from './signupStyle'
+import { Container } from '../../../../styles/container'
+
+interface FormValuesProps {
+  name: string
+  email: string
+  password: string
+  confirmPassword: string
+}
+
 const SignUp: NextPage = () => {
+  const router = useRouter()
+
+  const handleFormSubmit = async (values: FormValuesProps) => {
+    const response = await axios.post('/api/users', values)
+
+    if (response.data.success) {
+      toast.success('Cadastro realizado com sucesso!', {
+        theme: 'dark',
+      })
+
+      router.push('/auth/signin')
+    } else if (response.data.error) {
+      toast.error('Algo de errado aconteceu no cadastro!', {
+        theme: 'dark',
+      })
+    }
+  }
+
   return (
     <Container>
       <Head>
@@ -23,10 +53,17 @@ const SignUp: NextPage = () => {
           initialValues={initialValues}
           validationSchema={validationSchema}
           onSubmit={(values) => {
-            console.log('Ok enviado com sucesso', values)
+            handleFormSubmit(values)
           }}
         >
-          {({ values, errors, touched, handleChange, handleSubmit }) => (
+          {({
+            values,
+            errors,
+            touched,
+            handleChange,
+            handleSubmit,
+            isSubmitting,
+          }) => (
             <Form onSubmit={handleSubmit}>
               <InputBox>
                 <div className='input-container'>
@@ -111,7 +148,16 @@ const SignUp: NextPage = () => {
                   />
                 </div>
 
-                <button type='submit'>Cadastrar</button>
+                {isSubmitting ? (
+                  <div className='loading-icon'>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                ) : (
+                  <button type='submit'>Cadastrar</button>
+                )}
                 <small>Já tem uma conta? Entre aqui!</small>
               </InputBox>
             </Form>
